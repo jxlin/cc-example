@@ -5,12 +5,14 @@ import glob         # used to get the file paths from the input directory
 import ntpath       # used to get the absolute file name
 from   operator import itemgetter # used to make operation on list
 import sys
-
+import os
 
 # getting the input directory from the command args
 input=str(sys.argv[1])
 # getting the output file name from the command args
 output=str(sys.argv[2])
+if not os.path.exists(output.split('/')[1]):
+   os.mkdir(output.split('/')[1])
 # get the file paths from the input directory
 files=glob.glob(input)
 #define a list to store the paris (filename, filepath)
