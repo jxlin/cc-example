@@ -1,2 +1,2 @@
 # cc-example
-required packages: statistics, ntpath, glob, sys, os
+required packages: statistics, string, ntpath, glob, sys, os
