@@ -2,11 +2,14 @@
 import string
 import glob  # used for reading files from specific path
 import sys   # used to read command arg 
+import os
 
 # get the input directory tweet_input that contain text files
 input=str(sys.argv[1])
 # get the output file path tweet_output
 output=str(sys.argv[2])
+if not os.path.exists(output.split('/')[1]):
+    os.mkdir(output.split('/')[1])
 # get the file paths from the input directory
 files=glob.glob(input)
 # define a dictionary to store the word and the number of occurences 
